@@ -1,0 +1,67 @@
+ <html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var counter = 1;
+
+    $("#addButton").click(function () {
+
+        if(counter>3){
+            alert("Only 3 uploads allowed.");
+            return false;
+        }
+
+        var newFormDiv = $(document.createElement('div'))
+         .attr("id", 'FormDiv' + counter);
+
+        newFormDiv.append().html(
+  '<p><strong>File Description: </strong><em style="color: red;">(REQUIRED)</em></p>' +
+  '<textarea rows="2" cols="60" name="desc_' + counter + '"></textarea>' +
+  '<p> Select a Document Permission: </p>' +
+  '<select name="permissions_' + counter + '">' +
+  '  <option value="tos">ToS/Legal</option>' +
+  '  <option value="billing">Billing</option>' +
+  '  <option value="verifiers">Verification</option>' +
+  '  <option value="other" selected="selected">Unrestricted</option>' +
+  '</select>' +
+  '<p> Select a file: </p>' +
+  '<input size="30" type="file" name="file_' + counter + '" /><br/>'
+        );
+
+        newFormDiv.appendTo("#FormGroup");
+
+        counter++;
+     });
+
+     $("#removeButton").click(function () {
+    if(counter==2){
+          alert("Cannot remove any more.");
+          return false;
+       }
+
+    counter--;
+
+        $("#FormDiv" + counter).remove();
+
+     });
+
+    $("#addButton").trigger('click');
+
+  });
+
+</script>
+
+</head>
+<body>
+<input type='button' value='Add Button' id='addButton'>
+<input type='button' value='Remove Button' id='removeButton'>
+<div id='FormGroup'>
+
+</div>
+</body>
+</html>
+
+
