@@ -1,0 +1,21 @@
+                <script type="text/javascript">    
+                  var employees = {"Billing":["Bob", "John", "Fred"],"Sales":["Ted","Matt","Eric"]}; 
+                  function setOptions() {
+                    $('#employees').empty();
+                    var group = $('#group').val();
+                    var emp_loop = employees[group];
+                    $.each(emp_loop, function(index, value) {
+                      $('#employees').append($('<option>').attr('value', value).text(value));
+                    });
+                  }
+                </script>
+
+                    <select name="group" id="group" size="1" onchange="setOptions()">
+                        <option value=" " selected="selected"></option>
+                        <option value="Billing">Billing</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+
+                    <select name="employees" id="employees" size="1">
+                        <option value=" " selected="selected"> No Employee Selected</option>
+                    </select>

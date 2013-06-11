@@ -5,3 +5,6 @@ This is a collection of Javascript files that I use frequently.
 
 add_remove.html
 - Add/Remove form elements from an existing form
+
+dynamic_select.html
+- Update a select box dynamically based on the first select box value
