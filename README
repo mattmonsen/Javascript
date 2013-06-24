@@ -10,4 +10,4 @@ dynamic_select.html
 - Update a select box dynamically based on the first select box value
 
 ajax.html
-- Simple ajax call using jquery
+- Simple ajax call using jquery, ajax.pl is the perl file to respond with a json object
