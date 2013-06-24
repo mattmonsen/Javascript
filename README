@@ -8,3 +8,6 @@ add_remove.html
 
 dynamic_select.html
 - Update a select box dynamically based on the first select box value
+
+ajax.html
+- Simple ajax call using jquery
