@@ -11,3 +11,6 @@ dynamic_select.html
 
 ajax.html
 - Simple ajax call using jquery, ajax.pl is the perl file to respond with a json object
+
+checkall.html
+- A quick and simple of checkall checkboxes using jquery
